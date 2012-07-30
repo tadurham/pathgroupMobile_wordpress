@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="viewport" content="width=device-width" />
 
-<title></title>
+    <title></title>
 
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+	
+	<script type="text/javascript" src="http://use.typekit.com/igx2mmt.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 <?php
 	wp_head();
