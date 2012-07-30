@@ -6,7 +6,7 @@
 	<div style="height:56px;background-color:#424242;">
 		<div style="display:inline-table;margin-left:8px;">
 			<div style="display:table-cell;vertical-align:middle;height:56px;">
-				<a href="#" class="button">full site</a> <a href="tel:" class="button">call</a> <a href="mailto:" class="button">email</a>
+				<?php echo wpmp_switcher_link('desktop', 'full site'); ?> <a href="tel:" class="button">call</a> <a href="mailto:" class="button">email</a>
 			</div>
 			<div style="display:table-cell;vertical-align:middle;height:56px;padding-left:8px;font-family:arial;font-size:10px;color:#fff;">
 				PathGroup Headquarters<br>
