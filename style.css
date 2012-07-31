@@ -123,9 +123,13 @@ body{
     font-family:"Myriad Pro", "myriad-pro", "Gill Sans", "Gill Sans MT", helvetica, sans-serif;
 }
 .shadow_up {
-	box-shadow: -0px -0px 8px #333;
+	-webkit-box-shadow:0px 0px 8px #333;
+	-moz-box-shadow:0px 0px 8px #333; 
+	box-shadow: 0px 0px 8px #333;
 }
 .shadow_down {
+	-webkit-box-shadow:0px 0px 8px #333;
+	-moz-box-shadow:0px 0px 8px #333; 
 	box-shadow: 0px 0px 8px #333;
 }
 .logo_box {
