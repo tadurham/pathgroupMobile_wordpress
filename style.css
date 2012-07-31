@@ -374,6 +374,37 @@ ul#menu-mobile-navigation li ul li a{
 }
 
 /*------------------------------------------------------------ 
+		archive/post/single page styling
+------------------------------------------------------------*/
+.archive .page-header h1,
+.single .page-header h1{
+    font-size:15px;
+    border-left:none;
+    border-bottom: 1px #00703C dotted;
+    background: none;
+    color:#007136;
+    padding:0;
+    margin:13px 0 0 16px;
+    text-transform: normal;
+    height:auto;
+    font-weight:bold;
+}
+.archive article,
+.single article{
+    padding:15px 10px 0 27px;
+}
+.archive article h2 a,
+.single article h1{
+    color:#00693e;
+    text-decoration: none;
+    padding-bottom:15px;
+}
+.archive article .entry-content p,
+.single article .entry-content p{
+    padding:0;
+}
+
+/*------------------------------------------------------------ 
 		general page styling
 ------------------------------------------------------------*/
 .page-header h1{
@@ -405,7 +436,8 @@ footer{
     background-color:#424242;
     margin-top:10px;
 }
-.home footer{
+.home footer,
+.page-template-page-ourpeople-php footer{
     margin-top:0;
 }
 footer .buttonWrap{
