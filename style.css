@@ -126,7 +126,7 @@ html {
      -webkit-text-size-adjust:none;  
 }
 body{
-    font-family:"Myriad Pro", "myriad-pro", "Gill Sans", "Gill Sans MT", helvetica, sans-serif;
+    font-family:"Myriad Pro", "myriad-pro", arial, helvetica, sans-serif;
 }
 p{
     padding-left:27px;
@@ -344,6 +344,8 @@ ul#menu-mobile-navigation li a{
     height:26px;
     padding:13px 0 0 16px;
     background: url(images/arrowIconRight.png) right center no-repeat;
+    font-weight:600;
+    text-transform: uppercase
 }
 ul#menu-mobile-navigation li a.active{
     background: url(images/arrowIconDown.png) right center no-repeat; 
@@ -371,6 +373,8 @@ ul#menu-mobile-navigation li ul li a{
     text-decoration:none;
     height:26px;
     background:none;
+    font-weight:normal;
+    text-transform: uppercase;
 }
 
 /*------------------------------------------------------------ 
