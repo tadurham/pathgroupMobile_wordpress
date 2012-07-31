@@ -10,7 +10,7 @@ Version: 1.0
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
 
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -118,11 +118,24 @@ button {width: auto; overflow: visible;}
 
 
 /* --------------- Site Styles ---------------------- */
+
+/*------------------------------------------------------------ 
+		general styling
+------------------------------------------------------------*/
 html { 
      -webkit-text-size-adjust:none;  
 }
 body{
     font-family:"Myriad Pro", "myriad-pro", "Gill Sans", "Gill Sans MT", helvetica, sans-serif;
+}
+p{
+    padding-left:27px;
+    padding-right:9px;
+    padding-bottom:10px;
+    font-size:13px;
+}
+ul, ol{
+    list-style-position: inside;
 }
 .shadow_up {
 	-webkit-box-shadow:0px 0px 8px #333;
@@ -182,6 +195,25 @@ body{
 	background-color:#dfdfdf;
 	position:relative;
 	top:1px;
+}
+
+/*------------------------------------------------------------ 
+		misc catch-alls
+------------------------------------------------------------*/
+#main > h3 a,
+form h3{
+    padding-left:27px;
+    display: block;
+}
+form label{
+    display: block;
+}
+li{
+   list-style-type:disc; 
+   font-size: 13px;
+}
+img{
+    height:auto;
 }
 
 /*------------------------------------------------------------ 
@@ -287,7 +319,12 @@ body{
 /*------------------------------------------------------------ 
 		navigation
 ------------------------------------------------------------*/
-ul#menu-primary-nav li{
+ul#menu-mobile-navigation,
+ul#menu-mobile-navigation ul{
+    margin:0;
+    padding:0;
+}
+ul#menu-mobile-navigation li{
     font-size:15px;
     background: #e0e1e2;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UwZTFlMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ4JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZmUwZTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -298,23 +335,23 @@ ul#menu-primary-nav li{
     background: -ms-linear-gradient(top,  #e0e1e2 0%,#ffffff 48%,#dfe0e1 100%);
     background: linear-gradient(to bottom,  #e0e1e2 0%,#ffffff 48%,#dfe0e1 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e1e2', endColorstr='#dfe0e1',GradientType=0 );    
+    list-style-type: none;
 }
-ul#menu-primary-nav li a{
+ul#menu-mobile-navigation li a{
     color:#4d4d4f;
     display: block;
     text-decoration:none;
     height:26px;
     padding:13px 0 0 16px;
-    margin-right:30px;
     background: url(images/arrowIconRight.png) right center no-repeat;
 }
-ul#menu-primary-nav li a.active{
+ul#menu-mobile-navigation li a.active{
     background: url(images/arrowIconDown.png) right center no-repeat; 
 }
-ul#menu-primary-nav li ul.sub-menu{
+ul#menu-mobile-navigation li ul.sub-menu{
     display: none;
 }
-ul#menu-primary-nav li ul li{
+ul#menu-mobile-navigation li ul li{
     font-size:15px;
     border-left:12px solid green;
     background: #727273;
@@ -326,13 +363,37 @@ ul#menu-primary-nav li ul li{
     background: -ms-linear-gradient(top,  #727273 0%,#393939 49%,#0f0f10 50%,#0f0f10 100%);
     background: linear-gradient(to bottom,  #727273 0%,#393939 49%,#0f0f10 50%,#0f0f10 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#727273', endColorstr='#0f0f10',GradientType=0 );
+    list-style-type: none;
 }
-ul#menu-primary-nav li ul li a{
+ul#menu-mobile-navigation li ul li a{
     display: block;
     color:#ffffff;
     text-decoration:none;
     height:26px;
     background:none;
+}
+
+/*------------------------------------------------------------ 
+		general page styling
+------------------------------------------------------------*/
+.page-header h1{
+    font-size:15px;
+    border-left:12px solid green;
+    background: #727273;
+    color:#ffffff;
+    height:27px;
+    padding:13px 0 0 16px;
+    margin-bottom:15px;
+    text-transform: uppercase;
+    font-weight:normal;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzcyNzI3MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ5JSIgc3RvcC1jb2xvcj0iIzM5MzkzOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBmMGYxMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZjBmMTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #727273 0%, #393939 49%, #0f0f10 50%, #0f0f10 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#727273), color-stop(49%,#393939), color-stop(50%,#0f0f10), color-stop(100%,#0f0f10));
+    background: -webkit-linear-gradient(top,  #727273 0%,#393939 49%,#0f0f10 50%,#0f0f10 100%);
+    background: -o-linear-gradient(top,  #727273 0%,#393939 49%,#0f0f10 50%,#0f0f10 100%);
+    background: -ms-linear-gradient(top,  #727273 0%,#393939 49%,#0f0f10 50%,#0f0f10 100%);
+    background: linear-gradient(to bottom,  #727273 0%,#393939 49%,#0f0f10 50%,#0f0f10 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#727273', endColorstr='#0f0f10',GradientType=0 );
 }
 
 /*------------------------------------------------------------ 
@@ -342,6 +403,10 @@ footer{
     clear:both;
     width:100%;
     background-color:#424242;
+    margin-top:10px;
+}
+.home footer{
+    margin-top:0;
 }
 footer .buttonWrap{
     float:left;

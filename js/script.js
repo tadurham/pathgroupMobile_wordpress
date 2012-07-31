@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('ul#menu-primary-nav > li > a').click(function() {
+    $('ul#menu-mobile-navigation > li > a').click(function() {
     	event.preventDefault();
     	if($(this).hasClass('active')){
         	closeEntireAccordian();
