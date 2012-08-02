@@ -405,7 +405,7 @@ ul#menu-mobile-navigation li ul li a{
 }
 .archive article .entry-content p,
 .single article .entry-content p{
-    padding:0;
+    padding:5px 0;
 }
 
 /*------------------------------------------------------------ 
