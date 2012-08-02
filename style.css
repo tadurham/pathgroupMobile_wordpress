@@ -440,6 +440,10 @@ footer{
     background-color:#424242;
     margin-top:10px;
 }
+footer .address a{
+    color:#ffffff;
+    text-decoration: none;
+}
 .home footer,
 .page-template-page-ourpeople-php footer{
     margin-top:0;
